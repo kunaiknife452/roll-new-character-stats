@@ -269,6 +269,7 @@ async function ShowResultsInChatMessage(dice_roller) {
 
 	// Add Chat Card Button
 	switch (game.system.id) {
+		case "a5e":
 		case "dnd5e":
 		case "pf1":
 		case "ose":

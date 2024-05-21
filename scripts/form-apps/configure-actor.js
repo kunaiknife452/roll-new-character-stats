@@ -1,6 +1,7 @@
 import { DiceRoller } from "../dice-roller.js";
 import { RegisteredSettings } from "../registered-settings.js";
 import GAME_SYSTEM_Helper from "../../data/game-system-helper.js";
+import a5e_ActorHelper from "../helpers/a5e-actor-helper.js";
 import dnd5e_ActorHelper from "../helpers/dnd5e-actor-helper.js";
 import pf1_ActorHelper from "../helpers/pf1-actor-helper.js";
 import ose_ActorHelper from "../helpers/ose-actor-helper.js";
@@ -86,6 +87,8 @@ export class ConfigureActor extends FormApplication {
         let currency_cp = 0;
         
         switch (game.system.id) {
+            case "a5e":
+                break;
             case "dnd5e":
                 break;
             case "pf1":
@@ -142,6 +145,9 @@ export class ConfigureActor extends FormApplication {
             // END Common Character data
 
             // BEGIN Game System Unique data
+            // a5e            
+            is_dnd5e: game.system.id === "a5e",
+
             // dnd5e            
             is_dnd5e: game.system.id === "dnd5e",
             
@@ -190,6 +196,10 @@ export class ConfigureActor extends FormApplication {
         
         // Use [game-system]-actor-helper class to update actor
         switch (game.system.id) {
+            case "a5e":
+                let a5e_actor_helper = new a5e_ActorHelper(actor);
+                a5e_actor_helper._Update(formData);
+                break;
             case "dnd5e":
                 let dnd5e_actor_helper = new dnd5e_ActorHelper(actor);
                 dnd5e_actor_helper._Update(formData);
