@@ -1,6 +1,18 @@
 {
     "game_system": [
         {
+
+            "a5e": {
+                "abilities": [
+                    "str",
+                    "int",
+                    "wis",
+                    "dex",
+                    "con",
+                    "cha"
+                ],
+                "races": []
+            },
             "dnd5e": {
                 "abilities": [
                     "str",

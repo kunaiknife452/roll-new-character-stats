@@ -30,6 +30,8 @@ export class DiceRoller {
         // Prepare formula to roll other properties
         let formula = "";
         switch (game.system.id) {
+            case "a5e":
+                break;
             case "dnd5e":
                 break;
             case "pf1":

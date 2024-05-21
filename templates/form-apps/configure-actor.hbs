@@ -36,6 +36,9 @@
             let hide_score_col = ability_scores.dataset.bonus_points === "0" && ability_scores.dataset.distributionmethod === "apply-as-rolled"
             switch (game.system.id) {
 
+                case "a5e":
+		    HideRaceOptions();
+                    break;
                 case "dnd5e":
                     // Always show Score column because players can select Race during Configuration
                     break;

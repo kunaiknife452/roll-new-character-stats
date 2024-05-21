@@ -10,6 +10,8 @@ export default class GAME_SYSTEM_Helper {
     async getSystemRaces() {
         const jsonDATA = await jh.getJSONData("./modules/roll-new-character-stats/data/character-properties.json");
         switch (game.system.id) {
+            case "a5e":
+                return jsonDATA.game_system[0].a5e.races;
             case "dnd5e":
                 return jsonDATA.game_system[0].dnd5e.races;
             case "pf1":
@@ -30,6 +32,8 @@ export default class GAME_SYSTEM_Helper {
     async getSystemAbilities() {
         const jsonDATA = await jh.getJSONData("./modules/roll-new-character-stats/data/character-properties.json");
         switch (game.system.id) {
+            case "a5e":
+                return jsonDATA.game_system[0].a5e.abilities;
             case "dnd5e":
                 return jsonDATA.game_system[0].dnd5e.abilities;
             case "pf1":
@@ -49,6 +53,8 @@ export default class GAME_SYSTEM_Helper {
 
     getSystemActorType() { // Is this not saved somewhere in game.system ??? Explore this when you are bored.
         switch (game.system.id) {
+	    case "a5e":
+                return "character";
             case "dnd5e":
             case "pf1":
             case "ose":
