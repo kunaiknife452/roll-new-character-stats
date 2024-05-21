@@ -3,7 +3,7 @@
     "title": "Roll New Character Stats (RNCS)",
     "description": "Small mod for rolling new table-top-rpg character stats to get your game rolling!",
     "authors": [{"name": "Richard Fox"},{"name": "Kunai"}],
-    "version": "3.2.0",
+    "version": "3.2.1",
     "compatibility" : {"minimum": "10", "verified":"10"},
     "changelog": "",
     "styles":["styles/rncs-styles.css"],
@@ -27,7 +27,7 @@
       }
     ],
     "manifest": "https://raw.githubusercontent.com/kunaiknife452/roll-new-character-stats/master/module.json",
-    "download": "https://github.com/kunaiknife452/roll-new-character-stats/archive/refs/tags/v3.2.0.zip",
+    "download": "https://github.com/kunaiknife452/roll-new-character-stats/archive/refs/tags/v3.2.1.zip",
     "url": "https://github.com/kunaiknife452/roll-new-character-stats",
     "readme": "https://github.com/kunaiknife452/roll-new-character-stats/blob/master/README.md",
     "bugs": "https://github.com/kunaiknife452/roll-new-character-stats/issues"
